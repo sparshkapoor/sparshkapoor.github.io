@@ -1,0 +1,166 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* Top Banner (increased height by 20px) */
+.top-banner {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px; /* Increased height to 70px */
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+    transition: background 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+body.scrolled .top-banner {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid white;
+}
+
+/* Center Container for Name and Social Links */
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%; /* Adjust this to fit your design */
+}
+
+/* Banner Name */
+.banner-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner-name:hover {
+    color: #ddd;
+}
+
+/* Icons */
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon-link {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 20px; /* Increased margin for better spacing */
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #ddd;
+}
+
+/* Centered Content */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 0;
+}
+
+/* Opaque background for name and subtitle */
+.name-container {
+    background: rgba(0, 0, 0, 0.5); /* Slightly opaque black background */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.center-content h1, .center-content p {
+    margin: 0;
+    color: white;
+    font-weight: 900;
+}
+
+.center-content h1 {
+    font-size: 72px;
+}
+
+.center-content p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Album Grid (Shifted down by the banner height, 70px) */
+#album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1; /* Behind the name */
+    position: absolute;
+    top: 50px; /* Moved down by the new banner height */
+    width: 100%;
+}
+
+/* Individual Squares for Albums */
+.album-container {
+    width: 130px;
+    height: 130px;
+    perspective: 1000px;
+    margin: 5px;
+    position: relative;
+}
+
+/* Album Flip Styles */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s ease-in-out;
+    transform-origin: center;
+}
+
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Clear floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
