@@ -213,11 +213,127 @@ body.scrolled .top-banner {
 }
 
 /* Projects Section Placeholder */
+/* Projects Section Styles */
 .projects-section {
-    height: 100vh; /* Full screen height */
     background-color: #1a1a1a;
-    color: white;
+    padding: 50px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    color: white;
 }
+
+.project-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    justify-content: center; /* Center the entire content inside the container */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center-align the text and elements inside the container */
+}
+
+.project-container.left .project-image {
+    order: 1;
+}
+
+.project-container.left .project-details {
+    order: 2;
+}
+
+.project-container.right .project-image {
+    order: 2;
+}
+
+.project-container.right .project-details {
+    order: 1;
+}
+
+/* Project Image Styling */
+.project-image {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Project Details */
+.project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the title, text, and button horizontally */
+    padding: 10px;
+    text-align: center; /* Ensures that text inside the project-details is center-aligned */
+}
+
+.project-details h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.project-details p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Project Button */
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Remove underline from anchor tag */
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 200px;
+}
+
+.project-button:hover {
+    background-color: #0056b3;
+}
+
+/* Disabled (Greyed-out) Button Styles */
+.disabled-button {
+    background-color: #ccc; /* Grey background */
+    color: #666; /* Grey text color */
+    pointer-events: none; /* Prevent clicking */
+    cursor: not-allowed; /* Change cursor to 'not-allowed' */
+    opacity: 0.6; /* Reduce opacity to make it look disabled */
+}
+
+.disabled-button:hover {
+    background-color: #ccc; /* Ensure hover doesn't change background */
+}
+
+/* Adjust Project Layout Responsively */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-image, .project-details {
+        order: unset;
+        width: 100%;
+    }
+}
+

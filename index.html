@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sparsh Kapoor</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Top Banner -->
     <div class="top-banner">
-        <div class="banner-content">
-            <a href="index.html" class="banner-name">Sparsh Kapoor</a>
-            <div class="right">
-                <a href="https://www.linkedin.com/in/sparshkapoor5/" target="_blank" class="icon-link">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-                <a href="https://github.com/sparshkapoor" target="_blank" class="icon-link">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-            </div>
+      <div class="banner-content">
+        <a href="index.html" class="banner-name">Sparsh Kapoor</a>
+        <div class="right">
+          <a
+            href="https://www.linkedin.com/in/sparshkapoor5/"
+            target="_blank"
+            class="icon-link"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a
+            href="https://github.com/sparshkapoor"
+            target="_blank"
+            class="icon-link"
+          >
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
         </div>
+      </div>
     </div>
 
     <!-- Centered Name and Subtitle with Album Grid Behind -->
     <div class="center-content">
-        <div class="name-container">
-            <h1>Sparsh Kapoor</h1>
-            <p>CS @ Penn State</p>
-        </div>
+      <div class="name-container">
+        <h1>Sparsh Kapoor</h1>
+        <p>CS @ Penn State</p>
+      </div>
     </div>
 
     <!-- Album Grid (Behind Name) -->
@@ -37,22 +48,114 @@
 
     <!-- Projects Button and Scroll Arrow -->
     <div id="projects-button-container" class="projects-container">
-        <button id="projects-button" class="projects-btn">Projects</button>
-        <div class="scroll-arrow">
-            <ion-icon name="chevron-down-outline"></ion-icon>
-        </div>
+      <button id="projects-button" class="projects-btn">Projects</button>
+      <div class="scroll-arrow">
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
     </div>
 
     <!-- Placeholder for Projects Section -->
+    <!-- Projects Section -->
     <div id="projects-section" class="projects-section">
-        <h2>Projects Section</h2>
-        <!-- Add your project details here -->
+      <h2>Projects</h2>
+
+      <!-- First Project (Image on Left) -->
+      <div class="project-container left">
+        <div class="project-image">
+          <img src="assets/images/3DXVRLOGO.png" alt="Project Image" />
+        </div>
+        <div class="project-details">
+          <h3>3D XVR</h3>
+          <p>
+            Coded and Designed by me entirely. 3D modeling app with dynmaic
+            knowledge table to upload your own meta-data. Scale and manipulate
+            multiple 3D models and save them as a "scene" that can be accessed
+            via qr code using Airtable and Amazon S3.
+          </p>
+          <a
+            href="#"
+            target="_blank"
+            class="project-button disabled-button"
+            >Coming to App Store</a
+          >
+        </div>
+      </div>
+
+      <!-- Second Project (Image on Right) -->
+      <div class="project-container right">
+        <div class="project-image">
+          <img
+            src="assets/images/Command Center Icon.png"
+            alt="Project Image"
+          />
+        </div>
+        <div class="project-details">
+          <h3>visionOS Command Center</h3>
+          <p>
+            visionOS DoD based Command Center. Create multiple windows with 4
+            views per menu and 3 menus per window. Use ChatGPT to ask questions,
+            view data on your military needs, and use Google Street View to
+            immerse yourself anywhere in the word.
+          </p>
+          <a
+            href="https://github.com/sparshkapoor/HexagonWindows-Main"
+            target="_blank"
+            class="project-button"
+            >Access Codebase</a
+          >
+        </div>
+      </div>
+
+
+      <!-- Third Project (Image on Left again) -->
+      <div class="project-container left">
+        <div class="project-image">
+          <img src="assets/images/TGIF XVR TBME.png" alt="Project Image" />
+        </div>
+        <div class="project-details">
+          <h3>TGIF XVR</h3>
+          <p>
+            Specialized version of 3D XVR to show the dynamic capabilities of the app. Made specifically for the GSV TGIF x PSU event from September 22-25, 2024, and presented by Sparsh Kapoor at the Philadelphia Convention Center. 
+          </p>
+          <a
+            href="https://github.com/sparshkapoor/tgifxvr"
+            target="_blank"
+            class="project-button disabled-button"
+            >Private Codebase </a>
+        </div>
+      </div>
+
+      <!-- Fourth Project (Image on Left again) -->
+      <div class="project-container right">
+        <div class="project-image">
+          <img src="assets/images/IMG_824C75A3EF3F-1.jpeg" alt="Project Image" />
+        </div>
+        <div class="project-details">
+          <h3>Competative Switch Game Tracker</h3>
+          <p>
+            Description of the third project. Add more details here about what
+            the project is about, technologies used, etc.
+          </p>
+          <a
+            href="https://github.com/sparshkapoor/sparshmattcomp"
+            target="_blank"
+            class="project-button"
+            >Access Codebase</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Scripts -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="spotify-auth.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
